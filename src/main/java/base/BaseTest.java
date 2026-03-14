@@ -6,9 +6,11 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 
 import config.ConfigReader;
+
 @Listeners(reports.ExtentManager.class)
 public class BaseTest {
 	protected WebDriver driver;
+
 	@BeforeSuite
 	public void setup() throws Exception {
 		DriverFactory.initDriver();

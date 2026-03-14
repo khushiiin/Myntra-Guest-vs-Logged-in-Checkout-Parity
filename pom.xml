@@ -3,7 +3,6 @@
   <groupId>Myntra-Guest-vs-Logged-in-Checkout-Parity</groupId>
   <artifactId>Myntra-Guest-vs-Logged-in-Checkout-Parity</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
    <name>Myntra-Guest-vs-Logged-in-Checkout-Parity</name>
   <properties>
 		<maven.compiler.source>21</maven.compiler.source>
