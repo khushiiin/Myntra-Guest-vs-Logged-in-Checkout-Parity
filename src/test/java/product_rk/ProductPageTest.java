@@ -39,13 +39,42 @@ public class ProductPageTest extends BaseTest {
 		}
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void openBagTest() {
 		product.openBag();
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void refreshCartPageTest() {
 		product.refreshCartPage();
+	}
+	
+	@Test(priority = 7)
+	public void findTotalAmountTest() {
+		product.findTotalAmount();;
+	}
+	
+	/*-----------Negative Test Cases-----------*/
+	@Test(priority = 8)
+	public void openBagWithoutLoginTest() {
+		product.visitHomePage();
+		product.openBag();
+	}
+	
+	@Test(priority = 9)
+	public void openBagWithoutAddingProductTest() {
+		product.visitHomePage();
+		product.openBag();
+	}
+	
+	@Test(priority = 10)
+	public void AddRemoveCheckCartTest() {
+		product.visitHomePage();
+		String itemName = "Watch";
+		product.searchProduct(itemName);
+		product.addTocart();
+		product.openBag();
+		product.removeProduct();
+		product.openBag();
 	}
 }

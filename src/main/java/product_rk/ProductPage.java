@@ -57,4 +57,32 @@ public class ProductPage extends BasePage {
 	public void refreshCartPage() {
         driver.navigate().refresh();
     }
+	
+	@FindBy(xpath = "//div[1]//div[1]//div[1]//div[2]//div[2]//div[2]//div[5]//span[2]//span[2]")
+	private WebElement totalAmount;
+	public void findTotalAmount() {
+		System.out.println("Total Amount: "+totalAmount.getText());
+	}
+	
+	@FindBy(xpath = "//button[normalize-space()='REMOVE']")
+	private WebElement removeButton;
+	@FindBy(xpath = "//div[contains(@class,'confirmOrCancelModal-buttonClass')]//button[contains(@class,'inlinebuttonV2-base-actionButton')][normalize-space()='REMOVE']")
+	private WebElement removeItem;
+	@FindBy(xpath = "//div[contains(text(),'ADD ITEMS FROM WISHLIST')]")
+	private WebElement addToWishList;
+	public void removeProduct() {
+		WaitUtils.waitForElementToBeVisible(removeButton);
+		removeButton.click();
+		WaitUtils.waitForElementToBeVisible(removeItem);
+		removeItem.click();
+		WaitUtils.waitForElementToBeVisible(addToWishList);
+		addToWishList.click();
+	}
+	
+	@FindBy(xpath = "//a[@class='linkClean']//*[name()='svg'][1]")
+	private WebElement logo;
+	public void visitHomePage() {
+		logo.click();
+	}
+	
 }
