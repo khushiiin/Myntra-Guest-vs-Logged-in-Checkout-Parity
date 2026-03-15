@@ -24,7 +24,7 @@ Solved **1800+ coding problems** across multiple platforms.
 
 🎓 **B.Tech – Artificial Intelligence & Machine Learning**  
 Technocrats Institute of Technology and Science, Bhopal  
-CGPA: **8.36**
+CGPA: **8.43**
 
 📚 **Class XII – Science**  
 Percentage: **88.40%**
